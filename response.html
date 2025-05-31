@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Response 💌</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 id="responseMessage"></h1>
+    <button onclick="goToThankYou()">Continue</button>
+  </div>
+  <script>
+    const response = localStorage.getItem("userResponse");
+    const messageElement = document.getElementById("responseMessage");
+
+    if (response === "hellYes") {
+      messageElement.innerText = "Aww 🥺 You chose 'Hell Yes'!! You're the sweetest 💖";
+    } else {
+      messageElement.innerText = "Yayy! You said 'Yes'!! I'm so happy 💕";
+    }
+
+    function goToThankYou() {
+      window.location.href = "thankyou.html";
+    }
+  </script>
+</body>
+</html>
